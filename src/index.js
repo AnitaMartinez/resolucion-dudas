@@ -6,7 +6,7 @@ const server = express();
 server.use(cors());
 
 const dogBreeds = [
-    { breed: "Golden Retriever", characteristic: "Friendly and loyal" },
+    { breed: "Golden Retriever", characteristic: "Friendly and loyal!!!!" },
     { breed: "German Shepherd", characteristic: "Intelligent and versatile" },
     { breed: "Bulldog", characteristic: "Stubborn but affectionate" },
     { breed: "Poodle", characteristic: "Highly intelligent and hypoallergenic" },
@@ -30,7 +30,7 @@ server.get("/breeds", (request, response) => {
 
     // Si no  hay razas de perros, le mando un mensaje en concreto
     if (dogBreeds.length === 0) {
-        response.status(404).json({ success: false, error: "No se ha encontrado el recurso" })
+        response.status(404).json({ success: false, error: "No se ha encontrado el recurso, vaya" })
     } else {
         // response.status(200).json({ success: true, result: dogBreeds.map(breedDog => breedDog.breed) })
         response.status(200).json({ success: true, result: dogBreeds })
